@@ -70,9 +70,9 @@ impl eframe::App for HamControl {
                 run_script("mmsstv_stop.sh");
                 self.status = "MMSSTV 停止".to_string();
             }
-            if ui.button("11) Hamlogモード 停止").clicked() {
+            if ui.button("11) RM7400+Hamlog+MailQSL 停止").clicked() {
                 run_script("hamlog_stop.sh");
-                self.status = "Hamlogモード 停止".to_string();
+                self.status = "RM7400+Hamlog+MailQSL 停止".to_string();
             }
             if ui.button("12) FreeDV 停止").clicked() {
                 run_script("freedv_stop.sh");
