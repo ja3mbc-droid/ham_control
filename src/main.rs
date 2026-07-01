@@ -2,8 +2,11 @@ use eframe::egui;
 use std::process::Command;
 
 fn run_script(script: &str) {
-    let _ = Command::new("bash")
-        .arg(format!("/home/ja3mbc/{}", script))
+    let _ = Command::new("sh")
+        .arg("-c")
+        .arg(format!("bash /home/ja3mbc/{} > /tmp/ham_debug.log 2>&1", script))
+        .env("DISPLAY", ":0")
+        .env("HOME", "/home/ja3mbc")
         .spawn();
 }
 
@@ -43,7 +46,7 @@ impl eframe::App for HamControl {
                 self.status = "MMSSTV 起動".to_string();
             }
             if ui.button("5) RM7400+Hamlog+MailQSL 起動").clicked() {
-                run_script("hamlog_start.sh");
+                run_script("rm7400_start.sh");
                 self.status = "Hamlogモード 起動".to_string();
             }
             if ui.button("6) FreeDV 起動").clicked() {
