@@ -33,9 +33,9 @@ impl eframe::App for HamControl {
                 run_script("wsjtx_start.sh");
                 self.status = "WSJT-X 起動".to_string();
             }
-            if ui.button("2) WSJT-X 起動 (flrig+rigctld+WSJT-X+Hamlog+MailQSL+JT_Linker)").clicked() {
+            if ui.button("2) WSJT-X 起動 (flrig（+rigctld）+WSJT-X+Hamlog+MailQSL+JT_Linker)").clicked() {
                 run_script("ft8_start.sh");
-                self.status = "WSJT-X 起動 (flrig+rigctld+WSJT-X+Hamlog+MailQSL+JT_Linker)".to_string();
+                self.status = "WSJT-X 起動 (flrig（+rigctld）+WSJT-X+Hamlog+MailQSL+JT_Linker)".to_string();
             }
             if ui.button("3) RM7400 起動 (Hamlog+Remote7400+MailQSL)").clicked() {
                 run_script("rm7400_start.sh");
@@ -45,9 +45,9 @@ impl eframe::App for HamControl {
                 run_script("mmsstv_start.sh");
                 self.status = "MMSSTV 起動 (MMSSTV+Hamlog+MailQSL)".to_string();
             }
-            if ui.button("5) FreeDV 起動 (flrig+FD_Linker+FreeDV+MailQSL+Hamlog)").clicked() {
+            if ui.button("5) FreeDV 起動 (flrig+FD_Linker(→Hamlog)+FreeDV+MailQSL)").clicked() {
                 run_script("freedv_start.sh");
-                self.status = "FreeDV 起動 (flrig+FD_Linker+FreeDV+MailQSL+Hamlog)".to_string();
+                self.status = "FreeDV 起動 (flrig+FD_Linker(→Hamlog)+FreeDV+MailQSL)".to_string();
             }
             if ui.button("6) fldigi 起動 (flrig+fldigi+Hamlog+MailQSL)").clicked() {
                 run_script("fldigi_start.sh");
@@ -60,9 +60,9 @@ impl eframe::App for HamControl {
                 run_script("wsjtx_stop.sh");
                 self.status = "WSJT-X 停止".to_string();
             }
-            if ui.button("8) WSJT-X 停止 (flrig+rigctld+WSJT-X+Hamlog+MailQSL+JT_Linker)").clicked() {
+            if ui.button("8) WSJT-X 停止 (flrig（+rigctld）+WSJT-X+Hamlog+MailQSL+JT_Linker)").clicked() {
                 run_script("ft8_stop.sh");
-                self.status = "WSJT-X 停止 (flrig+rigctld+WSJT-X+Hamlog+MailQSL+JT_Linker)".to_string();
+                self.status = "WSJT-X 停止 (flrig（+rigctld）+WSJT-X+Hamlog+MailQSL+JT_Linker)".to_string();
             }
             if ui.button("9) RM7400 停止 (Hamlog+Remote7400+MailQSL)").clicked() {
                 run_script("rm7400_stop.sh");
@@ -72,9 +72,9 @@ impl eframe::App for HamControl {
                 run_script("mmsstv_stop.sh");
                 self.status = "MMSSTV 停止 (MMSSTV+Hamlog+MailQSL)".to_string();
             }
-            if ui.button("11) FreeDV 停止 (flrig+FD_Linker+FreeDV+MailQSL+Hamlog)").clicked() {
+            if ui.button("11) FreeDV 停止 (flrig+FD_Linker(→Hamlog)+FreeDV+MailQSL)").clicked() {
                 run_script("freedv_stop.sh");
-                self.status = "FreeDV 停止 (flrig+FD_Linker+FreeDV+MailQSL+Hamlog)".to_string();
+                self.status = "FreeDV 停止 (flrig+FD_Linker(→Hamlog)+FreeDV+MailQSL)".to_string();
             }
             if ui.button("12) fldigi 停止 (flrig+fldigi+Hamlog+MailQSL)").clicked() {
                 run_script("fldigi_stop.sh");
