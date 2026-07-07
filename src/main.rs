@@ -82,6 +82,13 @@ impl eframe::App for HamControl {
             }
 
             ui.separator();
+            ui.label("--- ツール ---");
+            if ui.button("13) HAM CONTROL v02 起動 (flrig周波数モニタ)").clicked() {
+                run_script("ham_control_v02_start.sh");
+                self.status = "HAM CONTROL v02 起動".to_string();
+            }
+
+            ui.separator();
             ui.label(format!("ステータス: {}", self.status));
         });
     }
@@ -90,8 +97,9 @@ impl eframe::App for HamControl {
 fn main() -> eframe::Result<()> {
     let options = eframe::NativeOptions {
         viewport: egui::ViewportBuilder::default()
-            .with_inner_size([320.0, 520.0])
+            .with_inner_size([340.0, 640.0])
             .with_title("HAM局 コントロール"),
+        renderer: eframe::Renderer::Glow,
         ..Default::default()
     };
 
