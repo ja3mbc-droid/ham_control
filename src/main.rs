@@ -33,7 +33,7 @@ impl eframe::App for HamControl {
                 run_script("wsjtx_start.sh");
                 self.status = "WSJT-X 起動".to_string();
             }
-            if ui.button("2) WSJT-X 起動 (flrig（+rigctld）+WSJT-X+Hamlog+MailQSL+JT_Linker)").clicked() {
+            if ui.button("2) WSJT-X 起動 (flrig（+rigctld）+WSJT-X+Hamlog+MailQSL)").clicked() {
                 run_script("ft8_start.sh");
                 self.status = "WSJT-X 起動 (flrig（+rigctld）+WSJT-X+Hamlog+MailQSL+JT_Linker)".to_string();
             }
@@ -60,7 +60,7 @@ impl eframe::App for HamControl {
                 run_script("wsjtx_stop.sh");
                 self.status = "WSJT-X 停止".to_string();
             }
-            if ui.button("8) WSJT-X 停止 (flrig（+rigctld）+WSJT-X+Hamlog+MailQSL+JT_Linker)").clicked() {
+            if ui.button("8) WSJT-X 停止 (flrig（+rigctld）+WSJT-X+Hamlog+MailQSL)").clicked() {
                 run_script("ft8_stop.sh");
                 self.status = "WSJT-X 停止 (flrig（+rigctld）+WSJT-X+Hamlog+MailQSL+JT_Linker)".to_string();
             }
