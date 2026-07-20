@@ -45,9 +45,9 @@ impl eframe::App for HamControl {
                 run_script("mmsstv_start.sh");
                 self.status = "MMSSTV 起動 (MMSSTV+Hamlog+MailQSL)".to_string();
             }
-            if ui.button("5) FreeDV 起動 (flrig+FD_Linker(→Hamlog)+FreeDV+MailQSL)").clicked() {
+            if ui.button("5) FreeDV 起動 (flrig+FreeDV+Hamlog+MailQSL)").clicked() {
                 run_script("freedv_start.sh");
-                self.status = "FreeDV 起動 (flrig+FD_Linker(→Hamlog)+FreeDV+MailQSL)".to_string();
+                self.status = "FreeDV 起動 (flrig+FreeDV+Hamlog+MailQSL)".to_string();
             }
             if ui.button("6) fldigi 起動 (flrig+fldigi+Hamlog+MailQSL)").clicked() {
                 run_script("fldigi_start.sh");
@@ -72,9 +72,9 @@ impl eframe::App for HamControl {
                 run_script("mmsstv_stop.sh");
                 self.status = "MMSSTV 停止 (MMSSTV+Hamlog+MailQSL)".to_string();
             }
-            if ui.button("11) FreeDV 停止 (flrig+FD_Linker(→Hamlog)+FreeDV+MailQSL)").clicked() {
+            if ui.button("11) FreeDV 停止 (flrig+FreeDV+Hamlog+MailQSL)").clicked() {
                 run_script("freedv_stop.sh");
-                self.status = "FreeDV 停止 (flrig+FD_Linker(→Hamlog)+FreeDV+MailQSL)".to_string();
+                self.status = "FreeDV 停止 (flrig+FreeDV+Hamlog+MailQSL)".to_string();
             }
             if ui.button("12) fldigi 停止 (flrig+fldigi+Hamlog+MailQSL)").clicked() {
                 run_script("fldigi_stop.sh");
@@ -83,9 +83,9 @@ impl eframe::App for HamControl {
 
             ui.separator();
             ui.label("--- ツール ---");
-            if ui.button("13) HAM CONTROL v02 起動 (flrig周波数モニタ)").clicked() {
+            if ui.button("13) HAM CONTROL v02 起動 (flrig+LogManager+HAMLOG連携)").clicked() {
                 run_script("ham_control_v02_start.sh");
-                self.status = "HAM CONTROL v02 起動".to_string();
+                self.status = "HAM CONTROL v02 起動 (flrig+LogManager+HAMLOG連携)".to_string();
             }
 
             ui.separator();
